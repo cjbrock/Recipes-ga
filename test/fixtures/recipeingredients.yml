@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  quantity: MyString
+  measurement_unit: MyString
+  resources: 
+  resources: 
+
+two:
+  quantity: MyString
+  measurement_unit: MyString
+  resources: 
+  resources: 

@@ -1,4 +1,6 @@
 RecipesGa::Application.routes.draw do
+  resources :recipeingredients
+
   get "/login" => 'sessions#new'
   post "/login" => 'sessions#create'
   get "/logout" => 'sessions#destroy'
