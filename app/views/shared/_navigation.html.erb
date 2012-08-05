@@ -1,6 +1,9 @@
 <div id='header'>
-  | <%= link_to_unless_current "Login", login_path %> |
-  <%= link_to_unless_current "Logout", logout_path %> |
-  <%= link_to_unless_current "Recipes", recipes_path %> |
-  <%= link_to_unless_current "Ingredients", ingredients_path %> |
+  <% if current_user %>
+    | <%= link_to_unless_current "Logout", logout_path %> |
+    <%= link_to_unless_current "Recipes", recipes_path %> |
+    <%= link_to_unless_current "Ingredients", ingredients_path %> |
+  <% else %>
+    | <%= link_to_unless_current "Login", login_path %> |
+  <% end %>
 </div>
