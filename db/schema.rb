@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20120802201216) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "recipeingredients", :force => true do |t|
+  create_table "recipe_ingredients", :force => true do |t|
     t.string   "quantity"
     t.string   "measurement_unit"
     t.integer  "ingredient_id"
