@@ -6,6 +6,15 @@
 </p>
 
 <p>
+  <b>Ingredients:</b>
+  <ul>
+    <% @recipe.ingredients.each do |ingredient| %>
+    <li><%= link_to ingredient.name, ingredient %></li>
+    <% end %>
+  </ul>
+</p>
+
+<p>
   <b>Description:</b>
   <%= @recipe.description %>
 </p>
