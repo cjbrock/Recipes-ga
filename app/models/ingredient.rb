@@ -6,4 +6,7 @@ class Ingredient < ActiveRecord::Base
 
   validates_uniqueness_of :name, :case_sensitive => false
 
+  accepts_nested_attributes_for :recipe_ingredients, allow_destroy: true
+  accepts_nested_attributes_for :recipes, allow_destroy: true
+
 end
