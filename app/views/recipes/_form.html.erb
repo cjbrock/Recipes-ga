@@ -16,12 +16,12 @@
     <%= f.text_field :name %>
   </div>
 
-  <%#= f.fields_for :ingredients do |ingredient_form| %>
-    <%#= song_form.label :ingredient %>
-    <%#= song_form.text_field :ingredient %>
-    <%#= song_form.link_to_remove "Remove this ingredient" %><br />
-  <% #end %>
-  <p><%#= f.link_to_add "Add an ingredient", :songs %></p>
+  <%= f.fields_for :ingredients do |ingredient_form| %>
+    <%= ingredient_form.label :ingredient %>
+    <%= ingredient_form.text_field :ingredient %>
+    <%= ingredient_form.link_to_remove "Remove this ingredient" %><br />
+  <% end %>
+  <p><%= f.link_to_add "Add an ingredient", :ingredients %></p>
 
   <div class="field">
     <%= f.label :description %><br />
