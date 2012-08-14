@@ -17,6 +17,8 @@
   </div>
 
   <%= f.fields_for :recipe_ingredients do |ingredient_form| %>
+    <%= ingredient_form.label :quantity %>
+    <%= ingredient_form.text_field :quantity %>
     <%= ingredient_form.label :ingredient %>
     <%= ingredient_form.text_field :ingredient %>
     <%= ingredient_form.link_to_remove "Remove this ingredient" %><br />
