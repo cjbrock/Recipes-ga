@@ -8,8 +8,8 @@
 <p>
   <b>Quantity:</b>
   <ul>
-  <% @recipe_ingredients.@recipe.each do |quantity| %>
-    <li><%= link_to recipe_ingredient.quantity, quantity %></li>
+    <% @recipe.recipe_ingredients.each do |ri| %>
+    <li><%= ri.quantity %></li>
     <% end %>
   </ul>
 </p>
