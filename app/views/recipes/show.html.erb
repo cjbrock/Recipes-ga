@@ -6,36 +6,19 @@
 </p>
 
 <p>
-  <b>Quantity:</b>
-  <ul>
-    <% @recipe.recipe_ingredients.each do |ri| %>
-    <li><%= ri.quantity %></li>
-    <% end %>
-  </ul>
-</p>
-
-<p>
-  <b>Ingredients:</b>
-  <ul>
-    <% @recipe.ingredients.each do |ingredient| %>
-    <li><%= link_to ingredient.name, ingredient %></li>
-    <% end %>
-  </ul>
-</p>
-<table border="1">
-<tr>
-<th>Header 1</th>
-<th>Header 2</th>
-</tr>
-<tr>
-<td>row 1, cell 1</td>
-<td>row 1, cell 2</td>
-</tr>
-<tr>
-<td>row 2, cell 1</td>
-<td>row 2, cell 2</td>
-</tr>
+<table>
+  <tr>
+    <th> Quantity </th>
+    <th> Ingredient </th>
+  </tr>
+  <% @recipe.recipe_ingredients.each do |ri| %>
+  <tr>
+    <td><%= ri.quantity %></td>
+    <td><%= link_to ri.ingredient.name, ingredient_path(ri.ingredient) %></td> 
+  </tr>
+<% end %>
 </table>
+</p>
 <p>
   <b>Description:</b>
   <%= @recipe.description %>
