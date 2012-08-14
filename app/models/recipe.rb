@@ -1,5 +1,5 @@
 class Recipe < ActiveRecord::Base
-  attr_accessible :description, :name
+  attr_accessible :description, :name, :recipe_ingredients_attributes
 
   
   has_many :recipe_ingredients
